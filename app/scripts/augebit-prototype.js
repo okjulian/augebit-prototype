@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-var augebitPrototypeApp = angular.module('augebitPrototypeApp', [])
+var augebitPrototypeApp = angular.module('augebitPrototypeApp', ['HNServices'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -11,6 +11,10 @@ var augebitPrototypeApp = angular.module('augebitPrototypeApp', [])
       .when('/signup', {
         templateUrl: 'views/signup.html',
         controller: 'MainCtrl'
+      })
+      .when('/links', {
+        templateUrl: 'views/links-list.html',
+        controller: 'LinksCtrl'
       })
       .otherwise({
         redirectTo: '/'
