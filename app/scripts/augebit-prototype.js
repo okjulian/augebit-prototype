@@ -21,8 +21,16 @@ var augebitPrototypeApp = angular.module('augebitPrototypeApp', ['HNServices'])
         controller: 'BooksCtrl'
       })
       .when('/timeline', {
-        templateUrl: 'views/timeline.html',
+        templateUrl: 'views/out-of-trial.html',
         controller: 'TimelineCtrl'
+      })
+      .when('/todos', {
+        templateUrl: 'views/out-of-trial.html',
+        controller: 'TodosCtrl'
+      })
+      .when('/out-of-trial', {
+        templateUrl: 'views/out-of-trial.html',
+        controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
