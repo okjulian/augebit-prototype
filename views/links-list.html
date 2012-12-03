@@ -1,10 +1,45 @@
 <div class="row-fluid">
-  <h3>Links</h3>
+  <h3>Learning Ruby on rails</h3>
+
+  <div class="navbar">
+    <div class="navbar-inner">
+      <ul class="nav">
+        <li><a href="#/out-of-trial"><i class="icon-ok"></i>Todo</a></li>
+        <li class="active"><a href="#/links"><i class="icon-file"></i>Links</a></li>
+        <li><a href="#/books"><i class="icon-book"></i>Books</a></li>
+        <li><a href="#/out-of-trial"><i class="icon-calendar"></i>Timeline</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr/>
+
+  <h4>Links</h4>
+  <form name="addLinkForm">
+    <label>Url</label>
+    <input type="text" ng-model="form.url" size="2"/> <br/>
+
+    <label>Title</label>
+    <input type="text" ng-model="form.title" size="2"/> <br/>
+    <a href="#/out-of-trial" role="button" class="btn">Add to TODO</a>
+    <a href="#/out-of-trial" role="button" class="btn">Add as read</a>
+  </form>
+</div>
+
+<hr/>
+
+<div class="row-fluid">
+  <h4>Links feed</h4>
   <p>Powered by HackerNews</p>
   <div>
     <ul>
       <li ng-repeat="link in links.results" class="thumbnail">
       <a href="{{link.item.url}}" target=_blank>{{link.item.title}} ({{link.item.points}} points)</a>
+
+      <br/>
+
+      <a href="#/out-of-trial" role="button" class="btn" title="add to todos"><i class="icon-ok"></i>to-do</a>
+      <a href="#/out-of-trial" role="button" class="btn" title="add as read"><i class="icon-th-list"></i>read</a>
       </li>
     </ul>
   </div>
