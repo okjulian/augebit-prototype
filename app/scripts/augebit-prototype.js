@@ -20,6 +20,10 @@ var augebitPrototypeApp = angular.module('augebitPrototypeApp', ['HNServices'])
         templateUrl: 'views/books-list.html',
         controller: 'BooksCtrl'
       })
+      .when('/timeline', {
+        templateUrl: 'views/timeline.html',
+        controller: 'TimelineCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
