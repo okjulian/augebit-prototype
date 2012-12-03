@@ -1,10 +1,30 @@
 <div class="row-fluid">
-  <h3>Links</h3>
+  <h4>Links</h4>
+  <form name="addLinkForm">
+    <label>Url</label>
+    <input type="text" ng-model="form.url" size="2" required/> <br/>
+
+    <label>Title</label>
+    <input type="text" ng-model="form.title" size="2" required/> <br/>
+    <button>Add to TODO</button>
+    <button>Add as read</button>
+  </form>
+</div>
+
+<hr/>
+
+<div class="row-fluid">
+  <h4>Links feed</h4>
   <p>Powered by HackerNews</p>
   <div>
     <ul>
       <li ng-repeat="link in links.results" class="thumbnail">
       <a href="{{link.item.url}}" target=_blank>{{link.item.title}} ({{link.item.points}} points)</a>
+
+      <br/>
+
+      <button>Add to TODO</button>
+      <button>Add as read</button>
       </li>
     </ul>
   </div>
