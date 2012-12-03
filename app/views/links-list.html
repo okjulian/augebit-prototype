@@ -1,0 +1,11 @@
+<div class="row-fluid">
+  <h3>Links</h3>
+  <p>Powered by HackerNews</p>
+  <div>
+    <ul>
+      <li ng-repeat="link in links.results" class="thumbnail">
+      <a href="{{link.item.url}}" target=_blank>{{link.item.title}} ({{link.item.points}} points)</a>
+      </li>
+    </ul>
+  </div>
+</div>
