@@ -20,7 +20,21 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="container-narrow" ng-view></div>
+
+
+        <div class="container-narrow">
+          <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#/signup">Sign up today!</a></li>
+           </ul>
+           <h3 class="muted">augeBIT</h3>
+          </div>
+
+          <hr>
+
+          <div ng-view></div>
+        </div>
 
         <script src="scripts/vendor/angular.js"></script>
 
